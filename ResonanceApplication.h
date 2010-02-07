@@ -1,6 +1,7 @@
 #pragma once
 
 #include <WProgram.h>
+#include "EQData.h"
 
 class ResonanceApplication{
 public:
@@ -8,4 +9,6 @@ public:
 	void setup();
 	void update();
 private:
+	int ledPin;
+	EQData data;
 };
