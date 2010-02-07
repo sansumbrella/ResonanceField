@@ -1,5 +1,4 @@
-#include "data.cpp"
-EQData data;
+#include <ResonanceApplication.h>
 
 void setup(){
 	
