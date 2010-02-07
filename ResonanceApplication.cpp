@@ -3,3 +3,11 @@
 ResonanceApplication::ResonanceApplication(){
 	
 }
+
+void ResonanceApplication::setup(){
+	
+}
+
+void ResonanceApplication::update(){
+	
+}
