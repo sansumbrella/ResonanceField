@@ -1,7 +1,7 @@
 #pragma once
 
 #include <WProgram.h>
-#include "EQData.h"
+#include "SensorData.h"
 
 class ResonanceApplication{
 public:
@@ -10,5 +10,5 @@ public:
 	void update();
 private:
 	int ledPin;
-	EQData data;
+	SensorData mSensors[data::numSensors];
 };

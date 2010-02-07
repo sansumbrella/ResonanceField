@@ -7,7 +7,7 @@ namespace data{
 	const int numSensors = 5;
 	const int numValues = 5;
 	const float raw[numSensors][numValues] = {
-						{1.0, 0.5, 1.2, 1.1, 0.8},
+						{1.0, 60.0, 45.0, 11.1, 0.8},
 						{1.0, 0.5, 1.2, 1.1, 0.8},
 						{1.0, 0.5, 1.2, 1.1, 0.8},
 						{1.0, 0.5, 1.2, 1.1, 0.8},

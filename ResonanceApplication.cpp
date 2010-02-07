@@ -1,7 +1,9 @@
 #include "ResonanceApplication.h"
 
 ResonanceApplication::ResonanceApplication(){
-	
+	for(int i=0; i!=data::numSensors; i++){
+		mSensors[i].init(i);
+	}
 }
 
 void ResonanceApplication::setup(){
