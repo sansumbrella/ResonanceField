@@ -1,5 +1,8 @@
 #include "PinUpdater.h"
 
+PinUpdater::PinUpdater(){
+	mHoldTime = 3;
+}
 
 void PinUpdater::setRate(unsigned long hz){
 	//change value every half herz cycle (on for half the time, off for half, might need tweaking)
@@ -11,7 +14,13 @@ void PinUpdater::setRate(unsigned long hz){
 }
 
 void PinUpdater::update(){
-	if(mOn || (millis() - mLastUpdate > mUpdateTime) ){
+	if(mOn && (millis() - mLastUpdate > mHoldTime) ){
+		//switch off after min hold time elapsed
+		changeValue();
+	}
+	
+	if( millis() - mLastUpdate > mUpdateTime ){
+		//switch on
 		changeValue();
 	}
 }
@@ -22,7 +31,6 @@ void PinUpdater::changeValue(){
 	
 	if(mOn){
 		digitalWrite(mPin, HIGH);
-		Serial.println("Switchin pin on");
 	} else {
 		digitalWrite(mPin, LOW);
 	}

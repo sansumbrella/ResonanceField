@@ -10,7 +10,7 @@ Wraps back to zero from end
 struct SensorData{
 public:
 	SensorData();
-	void init(int id){ mId = id; };
+	void setID(int id){ mId = id; };
 	float nextReading();
 private:
 	int mId;

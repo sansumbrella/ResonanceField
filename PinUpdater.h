@@ -3,6 +3,7 @@
 
 class PinUpdater{
 public:
+	PinUpdater();
 	void setPin(int id=13){mPin = id;}
 	void setRate(unsigned long herz);
 	void update();
@@ -10,6 +11,5 @@ public:
 private:
 	int mPin;
 	bool mOn;
-	unsigned long mLastUpdate, mUpdateTime;
-	
+	unsigned long mLastUpdate, mUpdateTime, mHoldTime;
 };

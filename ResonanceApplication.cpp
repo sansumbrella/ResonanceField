@@ -3,9 +3,10 @@
 ResonanceApplication::ResonanceApplication(){
 	mUpdateTime = 2001;
 	
+	mPlates[0].setPin(13);
+	
 	for(int i=0; i!=data::numSensors; i++){
-		mSensors[i].init(i);
-		mPins[i].setPin(13);
+		mPlates[i].setSensorID(i);
 	}
 }
 
@@ -14,13 +15,13 @@ void ResonanceApplication::setup(){
 	Serial.println("Starting ResonanceApplication");
 	
 	for(int i=0; i!=data::numSensors; i++){
-		mPins[i].setRate(mSensors[i].nextReading());
+		mPlates[i].nextTimeSegment();
 	}
 }
 
 void ResonanceApplication::update(){
 	for(int i=0; i!=data::numSensors; i++){
-		mPins[i].update();
+		mPlates[i].update();
 	}
 	
 	if(millis()-mLastUpdate > mUpdateTime){
@@ -36,6 +37,6 @@ void ResonanceApplication::changeTimeSegment(){
 	Serial.println("=====================");
 	
 	for(int i=0; i!=data::numSensors; i++){
-		mPins[i].setRate(mSensors[i].nextReading());
+		mPlates[i].nextTimeSegment();
 	}
 }

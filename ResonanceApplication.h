@@ -3,6 +3,7 @@
 #include <WProgram.h>
 #include "SensorData.h"
 #include "PinUpdater.h"
+#include "Plate.h"
 
 class ResonanceApplication{
 public:
@@ -14,6 +15,5 @@ private:
 	int ledPin;
 	unsigned long mLastUpdate, mUpdateTime;
 	
-	PinUpdater mPins[data::numSensors];
-	SensorData mSensors[data::numSensors];
+	Plate mPlates[data::numSensors];
 };
