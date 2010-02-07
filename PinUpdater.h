@@ -4,13 +4,12 @@
 class PinUpdater{
 public:
 	void setPin(int id=13){mPin = id;}
-	void setRate(float herz);
+	void setRate(unsigned long herz);
 	void update();
 	void changeValue();
 private:
 	int mPin;
-	float mUpdateTime;
 	bool mOn;
-	unsigned long mLastUpdate;
+	unsigned long mLastUpdate, mUpdateTime;
 	
 };
