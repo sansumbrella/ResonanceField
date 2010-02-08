@@ -10,9 +10,10 @@ public:
 	ResonanceApplication();
 	void setup();
 	void update();
+	void usePin(int pin);
 private:
 	void changeTimeSegment();
-	int ledPin;
+	int pinsUsed;
 	unsigned long mLastUpdate, mUpdateTime;
 	
 	Plate mPlates[data::numSensors];

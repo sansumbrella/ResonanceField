@@ -3,7 +3,7 @@
 ResonanceApplication::ResonanceApplication(){
 	mUpdateTime = 2001;
 	
-	mPlates[0].setPin(13);
+	pinsUsed = 0;
 	
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].setSensorID(i);
@@ -39,4 +39,10 @@ void ResonanceApplication::changeTimeSegment(){
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].nextTimeSegment();
 	}
+}
+
+//use the specified pin for output
+//more pins than sensors will roll back to the first sensor
+void ResonanceApplication::usePin(int pin){
+	mPlates[pinsUsed++].setPin(pin);
 }
