@@ -13,3 +13,7 @@ float SensorData::nextReading(){
 	}
 	return data::raw[mId][mIndex++];
 }
+
+void SensorData::setDataset(const float set[]){
+	mData = set;
+}

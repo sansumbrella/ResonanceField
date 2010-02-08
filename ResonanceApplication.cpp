@@ -4,6 +4,7 @@ ResonanceApplication::ResonanceApplication(){
 	mUpdateTime = 2001;
 	
 	pinsUsed = 0;
+	mPlates[0].setDataset(data::data1);
 	
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].setSensorID(i);
