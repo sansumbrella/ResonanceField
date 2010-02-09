@@ -14,6 +14,6 @@ float SensorData::nextReading(){
 	return mData[mIndex++];
 }
 
-void SensorData::setDataset(const float set[]){
-	mData = set;
+void SensorData::setDataset(const float &set){
+	mData = &set;
 }

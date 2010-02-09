@@ -4,16 +4,8 @@ ResonanceApplication::ResonanceApplication(){
 	mUpdateTime = 2001;
 	
 	pinsUsed = 0;
-	mPlates[0].setDataset(data::data1);
-	mPlates[1].setDataset(data::data2);
-	// mPlates[2].setDataset(data::data3);
-	// mPlates[3].setDataset(data::data4);
-	// mPlates[4].setDataset(data::data5);
-	// mPlates[5].setDataset(data::data6);
-	// mPlates[6].setDataset(data::data7);
-	// mPlates[7].setDataset(data::data8);
-	// mPlates[8].setDataset(data::data9);
-	for(int i=0; i != data::numSensors; ++i){
+	
+	for(int i=3; i != data::numSensors+3; i++){
 		usePin(i);
 	}
 }
@@ -21,6 +13,20 @@ ResonanceApplication::ResonanceApplication(){
 void ResonanceApplication::setup(){	
 	Serial.begin(9600);
 	Serial.println("Starting ResonanceApplication");
+	Serial.println("Setting data:");
+	Serial.println("Dataset 1");
+	mPlates[0].setDataset(*data::data1);
+	Serial.println("Dataset 2");
+	mPlates[1].setDataset(*data::data2);
+	Serial.println("Dataset 3");
+	mPlates[2].setDataset(*data::data3);
+	Serial.println("Dataset 4");
+	mPlates[3].setDataset(*data::data4);
+	// mPlates[4].setDataset(*data::data5);
+	// mPlates[5].setDataset(*data::data6);
+	// mPlates[6].setDataset(*data::data7);
+	// mPlates[7].setDataset(*data::data8);
+	// mPlates[8].setDataset(*data::data9);
 	
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].nextTimeSegment();

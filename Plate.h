@@ -5,7 +5,7 @@
 
 class Plate{
 public:
-	void setDataset(const float set[]){ mSensor.setDataset(set); }
+	void setDataset(const float &set){ mSensor.setDataset(set); }
 	void setPin(int id){ mPin.setPin(id); }
 	void update();
 	void nextTimeSegment();

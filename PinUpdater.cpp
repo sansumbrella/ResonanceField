@@ -6,7 +6,7 @@ PinUpdater::PinUpdater(){
 
 void PinUpdater::setRate(unsigned long hz){
 	//change value every half herz cycle (on for half the time, off for half, might need tweaking)
-	hz = min(100, hz)
+	hz = min(100, hz);
 	mUpdateTime = (float)1.0f/hz * 1000.0f;
 	Serial.print("Rate set to: ");
 	Serial.print(hz);
