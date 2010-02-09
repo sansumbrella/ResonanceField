@@ -7,6 +7,7 @@ ResonanceApplication::ResonanceApplication(){
 	
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].setSensorID(i);
+		mPlates[i].setPin(13-i);
 	}
 }
 
