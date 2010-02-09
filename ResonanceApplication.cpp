@@ -1,7 +1,7 @@
 #include "ResonanceApplication.h"
 
 ResonanceApplication::ResonanceApplication(){
-	mUpdateTime = 2000;
+	mUpdateTime = 1005;
 	
 	pinsUsed = 0;
 	
