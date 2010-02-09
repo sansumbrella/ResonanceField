@@ -1,7 +1,7 @@
 #include "PinUpdater.h"
 
 PinUpdater::PinUpdater(){
-	mHoldTime = 2;
+	mHoldTime = 5;
 }
 
 void PinUpdater::setRate(char hz){
