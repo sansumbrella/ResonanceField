@@ -10,7 +10,6 @@ Wraps back to zero from end
 struct SensorData{
 public:
 	SensorData();
-	void setID(int id){ mId = id; }
 	void setDataset(const float set[]);
 	float nextReading();
 private:

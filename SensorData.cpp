@@ -11,7 +11,7 @@ float SensorData::nextReading(){
 	if(mIndex >= data::numValues){
 		mIndex = 0;
 	}
-	return data::raw[mId][mIndex++];
+	return mData[mIndex++];
 }
 
 void SensorData::setDataset(const float set[]){

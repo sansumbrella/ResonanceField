@@ -5,9 +5,16 @@ ResonanceApplication::ResonanceApplication(){
 	
 	pinsUsed = 0;
 	mPlates[0].setDataset(data::data1);
-	
-	for(int i=0; i!=data::numSensors; i++){
-		mPlates[i].setSensorID(i);
+	mPlates[1].setDataset(data::data2);
+	// mPlates[2].setDataset(data::data3);
+	// mPlates[3].setDataset(data::data4);
+	// mPlates[4].setDataset(data::data5);
+	// mPlates[5].setDataset(data::data6);
+	// mPlates[6].setDataset(data::data7);
+	// mPlates[7].setDataset(data::data8);
+	// mPlates[8].setDataset(data::data9);
+	for(int i=0; i != data::numSensors; ++i){
+		usePin(i);
 	}
 }
 
