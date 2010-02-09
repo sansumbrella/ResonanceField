@@ -11,5 +11,5 @@ float SensorData::nextReading(){
 	if(mIndex >= data::numValues){
 		mIndex = 0;
 	}
-	return data::raw[mId][mIndex++];
+	return pgm_read_byte_near(data::raw[mId] + (mIndex++));
 }
