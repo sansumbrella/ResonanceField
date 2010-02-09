@@ -11,5 +11,6 @@ public:
 	void nextTimeSegment();
 private:
 	PinUpdater mPin;
+	int mId, mIndex;
 	SensorData mSensor;
 };

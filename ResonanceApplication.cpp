@@ -1,13 +1,12 @@
 #include "ResonanceApplication.h"
 
 ResonanceApplication::ResonanceApplication(){
-	mUpdateTime = 2001;
+	mUpdateTime = 2000;
 	
 	pinsUsed = 0;
 	
 	for(int i=0; i!=data::numSensors; i++){
 		mPlates[i].setSensorID(i);
-		mPlates[i].setPin(13-i);
 	}
 }
 
@@ -16,6 +15,7 @@ void ResonanceApplication::setup(){
 	Serial.println("Starting ResonanceApplication");
 	
 	for(int i=0; i!=data::numSensors; i++){
+		mPlates[i].setPin(13-i);
 		mPlates[i].nextTimeSegment();
 	}
 }

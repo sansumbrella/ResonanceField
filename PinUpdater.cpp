@@ -4,7 +4,7 @@ PinUpdater::PinUpdater(){
 	mHoldTime = 2;
 }
 
-void PinUpdater::setRate(unsigned long hz){
+void PinUpdater::setRate(char hz){
 	//change value every half herz cycle (on for half the time, off for half, might need tweaking)
 	mUpdateTime = (float)1.0f/hz * 1000.0f;
 	Serial.print("Rate set to: ");
@@ -34,4 +34,11 @@ void PinUpdater::changeValue(){
 	} else {
 		digitalWrite(mPin, LOW);
 	}
+}
+
+void PinUpdater::setPin(int id){
+	mPin = id;
+	pinMode(mPin, OUTPUT);
+	Serial.print("Pin set to: ");
+	Serial.println(id);
 }

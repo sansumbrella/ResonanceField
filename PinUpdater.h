@@ -4,8 +4,8 @@
 class PinUpdater{
 public:
 	PinUpdater();
-	void setPin(int id=13){mPin = id;}
-	void setRate(unsigned long herz);
+	void setPin(int id=13);
+	void setRate(char herz);
 	void update();
 	void changeValue();
 private:
