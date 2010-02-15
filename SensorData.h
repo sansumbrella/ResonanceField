@@ -11,7 +11,7 @@ struct SensorData{
 public:
 	SensorData();
 	void setID(int id){ mId = id; };
-	float nextReading();
+	int nextReading();
 private:
 	int mId;
 	int mIndex;
