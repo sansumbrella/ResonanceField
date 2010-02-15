@@ -7,9 +7,13 @@ SensorData::SensorData(){
 /**
 Return the sensor value at this station and point to the next one
 */
-int SensorData::nextReading(){
+prog_uint SensorData::nextReading(){
 	if( mIndex >= data::numValues ){
 		mIndex = 0;
 	}
-	return 10 * ( (int) pgm_read_byte_near( data::raw[mId][mIndex++] ) );
+	prog_uint16_t val = pgm_read_word_near( data::raw[mId][mIndex] );
+	mIndex++;
+	Serial.print("Getting reading of: ");
+	Serial.print(val);
+	return val;
 }

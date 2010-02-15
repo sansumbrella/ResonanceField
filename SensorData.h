@@ -1,5 +1,6 @@
 #pragma once
 
+#include <WProgram.h>
 #include "RawData.h"
 
 /**
@@ -11,7 +12,7 @@ struct SensorData{
 public:
 	SensorData();
 	void setID(int id){ mId = id; };
-	int nextReading();
+	prog_uint16_t nextReading();
 private:
 	int mId;
 	int mIndex;
