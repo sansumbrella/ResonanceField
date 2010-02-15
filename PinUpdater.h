@@ -6,7 +6,7 @@ public:
 	PinUpdater();
 	void setPin(int id=13);
 	void setRate(char herz);
-	void setUpdateInterval(int millis);
+	void setUpdateInterval(unsigned int millis);
 	void update();
 	void changeValue();
 private:
