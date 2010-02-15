@@ -19,6 +19,10 @@ void ResonanceApplication::setup(){
 		mPlates[i].setPin(13-i);
 		mPlates[i].nextTimeSegment();
 	}
+	
+	for(int i=0; i!=data::numSensors; i++){
+		mPlates[i].printValues();
+	}
 }
 
 void ResonanceApplication::update(){

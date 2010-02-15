@@ -13,6 +13,7 @@ public:
 	SensorData();
 	void setID(int id){ mId = id; };
 	prog_uint16_t nextReading();
+	prog_uint16_t readingAt(int index);
 private:
 	int mId;
 	int mIndex;

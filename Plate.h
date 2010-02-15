@@ -9,6 +9,7 @@ public:
 	void setSensorID(int id){ mSensor.setID(id); }
 	void update();
 	void nextTimeSegment();
+	void printValues();
 private:
 	PinUpdater mPin;
 	int mId, mIndex;

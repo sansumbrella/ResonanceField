@@ -8,3 +8,12 @@ void Plate::nextTimeSegment(){
 void Plate::update(){
 	mPin.update();
 }
+
+void Plate::printValues(){
+	Serial.print("Sensor values: [");
+	for(int i=0; i!=10; i++){
+		Serial.print( mSensor.readingAt(i) );
+		Serial.print(",");
+	}
+	Serial.println("]");
+}
