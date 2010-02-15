@@ -12,7 +12,7 @@ ResonanceApplication::ResonanceApplication(){
 }
 
 void ResonanceApplication::setup(){	
-	Serial.begin(9600);
+	// Serial.begin(9600);
 	Serial.println("Starting ResonanceApplication");
 	
 	for(int i=0; i!=data::numSensors; i++){

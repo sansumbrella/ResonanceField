@@ -1,5 +1,1 @@
-Going to be doing some things in here. This project will take some data and turn it into motor motion. Simple.
-Right now, PinUpdater is working well, switching pins on for one cycle with a fixed interval.
-
-TODO:
-Figure out how to pack in as much data as possible
+Sends on/off signals to pins based on some compiled data.
